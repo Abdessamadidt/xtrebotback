@@ -1,0 +1,8 @@
+.main-content {
+    margin-left: 20.2%;
+    transition: margin-left 0.3s;
+}
+
+.main-content-collapsed {
+    margin-left: 7.55%;
+}

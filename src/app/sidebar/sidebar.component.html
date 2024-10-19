@@ -1,0 +1,28 @@
+<div class="sidenav" [ngClass]="isLeftSidebarCollapsed() ? 'sidenav-collapsed' : ''">
+    <div class="logo-container">
+        @if (!isLeftSidebarCollapsed()) {
+        <div class="logo-img">
+            <img [src]="imgLogo" width="155">
+        </div>
+        }
+        <button class="logo" (click)="toggleCollapse()">
+            <img class="icon-left" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconLeft" width="30">
+        </button>
+    </div>
+    <div class="sidenav-nav">
+        @for (item of items; track $index) {
+        <li class="sidenav-nav-item">
+            <a class="sidenav-nav-link" [routerLink]="item.routeLink" routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }" (mouseenter)="setHoveredIndex($index)"
+                (mouseleave)="setHoveredIndex(null)">
+                <img class="sidenav-link-icon"
+                    [src]="(hoveredItemIndex === $index || isActive(item.routeLink)) ? item.hoverIcon : item.icon"
+                    width="30" height="30">
+                @if (!isLeftSidebarCollapsed()) {
+                <span class="sidenav-link-text">{{ item.label }}</span>
+                }
+            </a>
+        </li>
+        }
+    </div>
+</div>
