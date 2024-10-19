@@ -14,13 +14,13 @@ export class SidebarComponent {
 
   iconLeft: string = 'assets/icons/left.svg';
   iconRight: string = 'assets/icons/right.svg';
-  imgLogo: string = 'assets/logo.svg';
+  imgLogo: string = 'assets/trebot2.png';
 
   constructor(private router: Router) {}
 
   items = [
     {
-      routeLink: '',
+      routeLink: '/dashboard',
       icon: 'assets/icons/home.svg',
       hoverIcon: 'assets/icons/home-hover.svg',
       label: 'Home',

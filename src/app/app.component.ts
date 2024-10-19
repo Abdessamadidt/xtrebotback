@@ -21,6 +21,7 @@ export class AppComponent implements OnInit {
     this.isLeftSidebarCollapsed.set(this.screenWidth() < 768);
   }
 
+  
   changeIsLeftSidebarCollapsed(isLeftSidebarCollapsed: boolean): void {
     this.isLeftSidebarCollapsed.set(isLeftSidebarCollapsed);
   }

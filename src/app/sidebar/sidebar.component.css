@@ -4,22 +4,21 @@
     position: fixed;
     z-index: 1;
     top: 0;
-    width: 20.2%;
-    padding: 20px 10px;
+    width: 17%;
     height: 100vh;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
     font-family: 'Nunito', sans-serif;
     border-right: 1.4px solid rgba(31, 33, 40, 0.08);
+    margin-top: 10px;
 }
 
 .sidenav-collapsed {
-    width: 7.55%;
+    width: 6%;
 }
 
 .sidenav-collapsed .logo-container {
     justify-content: center;
-    /* Center the items horizontally */
 }
 
 .sidenav .logo-container {
@@ -88,15 +87,15 @@
 .sidenav-nav .sidenav-nav-item .sidenav-nav-link {
     display: flex;
     align-items: center;
-    height: 4.5rem;
+    height: 3.8rem;
     padding: 16px;
     color: #777E90;
     text-decoration: none;
     border-radius: 12px;
     transition: all 0.3s ease;
     position: relative;
-    margin-top: 6px;
     vertical-align: middle;
+    font-weight: 700;
 }
 
 
@@ -137,4 +136,10 @@
 .icon-collapsed {
     transform: rotate(180deg);
     margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .sidenav{
+        display: none;
+    }
 }

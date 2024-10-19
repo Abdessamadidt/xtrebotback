@@ -1,0 +1,17 @@
+<div class="blog-slider">
+    <button class="slider-control prev">
+        <span class="fas fa-chevron-left"></span>
+    </button>
+
+    <div class="slider-wrapper">
+        <div *ngFor="let blog of blogs" class="blog-item">
+            <a [routerLink]="blog.route">
+                <img class="blog-img" [src]="blog.image" alt="Blog Image">
+            </a>
+        </div>
+    </div>
+
+    <button class="slider-control next" aria-label="Next">
+        <span class="fas fa-chevron-right"></span>
+    </button>
+</div>

@@ -2,11 +2,11 @@
     <div class="logo-container">
         @if (!isLeftSidebarCollapsed()) {
         <div class="logo-img">
-            <img [src]="imgLogo" width="155">
+            <img [src]="imgLogo">
         </div>
         }
         <button class="logo" (click)="toggleCollapse()">
-            <img class="icon-left" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconLeft" width="30">
+            <img class="icon-left" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconLeft">
         </button>
     </div>
     <div class="sidenav-nav">
@@ -17,7 +17,7 @@
                 (mouseleave)="setHoveredIndex(null)">
                 <img class="sidenav-link-icon"
                     [src]="(hoveredItemIndex === $index || isActive(item.routeLink)) ? item.hoverIcon : item.icon"
-                    width="30" height="30">
+                    >
                 @if (!isLeftSidebarCollapsed()) {
                 <span class="sidenav-link-text">{{ item.label }}</span>
                 }

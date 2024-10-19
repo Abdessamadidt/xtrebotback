@@ -1,0 +1,69 @@
+.container-fluid{
+    margin-left: 10px;
+    margin-top: 15px;
+    width: 98%;
+}
+.title
+    {
+        font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 630; /* Bold */
+        font-size: 3.9rem; /* Adjust the size as needed */
+        color: #000; /* Adjust color if necessary */
+
+    }
+
+    p {
+        font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        font-weight: 420;
+        font-size: 1rem;
+        color: #191B21; /* Darker color for better readability */
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }    
+
+.imgcont{
+    width: 90px;
+    height: 38px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.imgrow{
+    width: 150px;
+}
+
+.button {
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 700; /* Semi-bold */
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #3772FF; /* Blue button color */
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    border-left: 1px solid #ddd; /* To separate input and button */
+    border-radius: 8px;
+    margin : 5px;
+    height: 50px;
+    width: 90%;
+}
+
+.p2{
+    color:#777E90
+}
+
+h5{
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500; /* Semi-bold */
+
+}
+
+.row{
+    margin-left: 10px;
+}
