@@ -18,6 +18,7 @@ html{
 @media screen and (max-width: 1457px) {
     /* Sélectionne tous les éléments et les masque */
     * {
+      display: none;
     }
   }
 html, body { height: 100%; }
