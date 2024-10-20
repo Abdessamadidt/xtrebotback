@@ -274,8 +274,15 @@ button:hover {
     display: none;
 }
 
+.titlecont{
+    display: none;
+}
+
 @media (max-width: 768px) {
 
+    .titlecont{
+        display: block;
+    }
     .desc{
         display: none;
     }
