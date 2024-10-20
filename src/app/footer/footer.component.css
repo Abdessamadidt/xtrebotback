@@ -82,7 +82,7 @@ input[type="email"] {
     font-size: 1rem;
     padding: 12px 16px;
     border: none;
-    width: 250px;
+    width: 230px;
     outline: none;
     height: 5px;
 }
@@ -107,6 +107,7 @@ button {
     margin : 5px;
     height: 45;
     margin-right: -5px;
+    
 }
 
 .copyright{
@@ -114,4 +115,19 @@ button {
     margin-top: 60px;
     margin-left: 40px;
     color: #8a8888ac; /* Light gray placeholder */
+}
+
+@media screen and (max-width: 700px) {
+    h1{
+        margin-top: 40px;
+    }
+
+    .newsletter{
+        margin-right: 25px;
+    }
+
+    button{
+        width: 100px !important;
+    }
+    
 }

@@ -270,6 +270,10 @@ button:hover {
     list-style: none;
 }
 
+.img6{
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     .desc{
@@ -383,5 +387,8 @@ button:hover {
 
     .img5{
         display: none;
+    }
+    .img6{
+        display: block;
     }
 }
