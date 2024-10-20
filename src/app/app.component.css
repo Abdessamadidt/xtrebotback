@@ -1,8 +1,12 @@
+*{
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
 .main-content {
     margin-left: 17%;
     transition: margin-left 0.3s;
     background-color: #F7F9FD;
-
+  
 }
 
 .main-content-collapsed {
@@ -21,6 +25,7 @@ app-header {
     top: 0; /* Aligns it at the top */
     z-index: 1000; /* Ensure it's above other content */
     max-width: 80%;
+    overflow: hidden;
   }
   
   /* Make sure your main content has top padding to prevent it from being hidden under the fixed header */

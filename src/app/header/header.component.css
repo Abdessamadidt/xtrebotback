@@ -1,5 +1,7 @@
 .page-main-header{
     background-color: #F7F9FD;
+    width: 99%;
+    overflow: hidden;
 }
 
 .main-header-right{
@@ -94,11 +96,6 @@ li{
 
 }
 
-.open{
-    border: 1px red solid;
-    width: 94% !important;
-    margin-left: 6% !important;
-}
 .signup{
     margin-right: 20px;
 }

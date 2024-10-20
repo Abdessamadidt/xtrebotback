@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-5 side ">
+        <div class="row row1 mt-5">
+            <div class="col-9 logo ">
+                <img src="../../assets/trebot3.png">
+            </div>
+            <div class="incones col-3 ">
+                <img src="../../assets/darkwhite.svg">
+                <img src="../../assets/langwhite.svg">
+            </div>
+        </div>
+        <div class="row row2">
+            <h5>We make it easy to<br>
+                buy and sell<br>
+                cryptocurrency</h5>
+            <h6>Crypto Asset Exchange</h6>
+        </div>
+        <div class="row3">
+            <img src="../../assets/bags.png">
+        </div>
+        <div class="row row4 mb-3">
+            <h5>Sign Up now and get down your trading Fees to Zero!</h5>
+            <h6>Event end time</h6>
+        </div>
+        <div class="row5">
+            <div class="time">
+                <span class="letter-top-right">D</span>
+                <span class="centered-word">{{days}}</span>
+            </div>
+            <div class="time">
+                <span class="letter-top-right">H</span>
+                <span class="centered-word">{{hours}}</span>
+            </div>
+            <div class="time">
+                <span class="letter-top-right">M</span>
+                <span class="centered-word">{{minutes}}</span>
+            </div>
+            <div class="time">
+                <span class="letter-top-right">S</span>
+                <span class="centered-word">{{seconds}}</span>
+            </div>
+        </div>
+    </div>
+    <div class="col formsignup">
+        <h1 class="title-form text-center mt-4 mb-3">Sign up to XTreBIT</h1>
+        <form class="form-container mt-5">
+            <div class="form-group">
+                <label for="formGroupExampleInput" class="label mt-2">Email</label>
+                <input type="text" class="form-control" id="formGroupEmail" placeholder="">
+            </div>
+            <div class="form-group mt-2">
+                <label for="formGroupExampleInput2" class="label mt-2">Password</label>
+                <input type="text" class="form-control" id="formGroupPassword" placeholder="">
+            </div>
+            <div class="form-group mt-2">
+                <label for="formGroupExampleInput" class="label mt-2">Confirm Password</label>
+                <input type="text" class="form-control" id="formGroupPassword2" placeholder="">
+            </div>
+            <div class="row form-check mt-4">
+                <input class="col-1 form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="col-11 form-check-label" for="defaultCheck1">
+                    By signing up I agree that I am 18 years of age or older, to the<span class="span"><a [routerLink]="['/Privacy-policy']">
+                            User Agreement, Privacy Policy, Cookie Policy</a>
+                    </span>
+                </label>
+            </div>
+            <button class="button mt-4" type="submit" [routerLink]="['/']">Sign Up</button>
+        </form>
+
+    </div>
+</div>

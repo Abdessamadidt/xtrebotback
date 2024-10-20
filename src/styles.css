@@ -1,9 +1,14 @@
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     
 }
+
+.container {
+   /* Permet le défilement vertical si nécessaire */
+}
+
 
 body{
     background-color: #F7F9FD;
@@ -18,7 +23,6 @@ html{
 @media screen and (max-width: 1457px) {
     /* Sélectionne tous les éléments et les masque */
     * {
-      display: none;
     }
   }
 html, body { height: 100%; }

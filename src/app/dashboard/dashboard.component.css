@@ -1,6 +1,7 @@
 .container-fluid {
     background-color: #F7F9FD;
     margin-bottom: 120px;
+
 }
 
 .title {
@@ -15,6 +16,7 @@
     justify-content: space-between;
     margin-left: 20px;
     width: 93%;
+
 }
 
 .row1 p,
@@ -35,9 +37,9 @@
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 18px;
-    overflow: hidden;
     width: fit-content;
 }
+
 
 input[type="email"] {
     font-family: 'Inter', sans-serif;
@@ -74,11 +76,17 @@ button:hover {
     background-color: #0056b3;
 }
 
+.carousel{
+
+    width: 98%;
+}
+
 .coinscont {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
+    justify-content: space-between;
+    width: 95%;
+    margin-left: 20px;
 }
 
 .cardcoin {
@@ -123,6 +131,8 @@ button:hover {
 .row3 {
     text-align: center;
     margin-bottom: 100px;
+
+
 }
 
 .row3 h1 {
@@ -177,7 +187,8 @@ button:hover {
 .row6,
 .row7 {
     width: 95%;
-    margin-left: 20px;
+    margin-left: 2%;
+    display: flex;
 }
 
 .row5 {
@@ -203,6 +214,7 @@ button:hover {
     margin-bottom: 30px;
     margin-top: -20px;
     text-transform: uppercase;
+    width: 400px;
 }
 
 .desc5 {
@@ -239,7 +251,7 @@ button:hover {
 }
 
 .nav {
-    margin-left: 40px;
+    margin-left: 2%;
     margin-top: 27px;
     font-family: "DM Sans", sans-serif;
     list-style: none;
@@ -255,11 +267,55 @@ button:hover {
     font-size: 16px;
     color: #777E90;
     cursor: pointer;
+    list-style: none;
 }
 
 @media (max-width: 768px) {
+
+    .desc{
+        display: none;
+    }
+
+    .col2{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    
     .imghome {
         height: 200px;
+    }
+
+    .nav ul{
+        margin-left: -20px !important;
+    }
+
+    .nav 
+
+    .nav ul li {
+        margin-right: 0px !important;
+        width: 100px;
+        font-weight: 500;
+        font-size: 13px !important;
+        color: #777E90;
+        cursor: pointer;
+        list-style: none;
+    }
+    
+    .list5 li{
+        margin-left: 0;
+        width: 300px;
+    }
+
+    .buttonba{
+        padding: 0%;
+        width: 200px;
+    }
+
+    .form-container button{
+        padding: 2px;
+        font-size: 0.9rem;
+        width: 100px;
     }
 
     .container-fluid {
@@ -274,6 +330,8 @@ button:hover {
         flex-direction: column;
         margin-left: 0;
         width: 100%;
+    
+
     }
 
     .col1,
@@ -294,10 +352,6 @@ button:hover {
     .buttoncoin {
         width: 100%;
         bottom: 10px;
-    }
-
-    .coinscont {
-        gap: 20px;
     }
 
     .cardcoin {
@@ -325,5 +379,9 @@ button:hover {
 
     .imgitem img {
         width: 100px;
+    }
+
+    .img5{
+        display: none;
     }
 }

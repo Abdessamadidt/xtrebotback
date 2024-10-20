@@ -21,11 +21,13 @@ import { BuyCryptoComponent } from './buy-crypto/buy-crypto.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { CarouselBlogComponent } from './carousel-blog/carousel-blog.component';
+import { SignupComponent } from './signup/signup.component';
+import { LayoutComponent } from './layout/layout.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, SidebarComponent, BlogComponent, HeaderComponent, MainComponent, DashboardComponent, FooterComponent, CardcoinComponent, ExchangeComponent, PricesComponent, WalletsComponent, BuyCryptoComponent, ActivitiesComponent, CarouselComponent, CarouselBlogComponent],
+  declarations: [AppComponent, SidebarComponent, BlogComponent, HeaderComponent, MainComponent, DashboardComponent, FooterComponent, CardcoinComponent, ExchangeComponent, PricesComponent, WalletsComponent, BuyCryptoComponent, ActivitiesComponent, CarouselComponent, CarouselBlogComponent, SignupComponent, LayoutComponent],
   imports: [BrowserModule, AppRoutingModule, RouterModule, CommonModule,NgApexchartsModule],
   providers: [
     provideAnimationsAsync()
