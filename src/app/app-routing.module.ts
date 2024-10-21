@@ -9,6 +9,7 @@ import { ActivitiesComponent } from './activities/activities.component';
 import { BuyCryptoComponent } from './buy-crypto/buy-crypto.component';
 import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
+import { BlogListComponent } from './blog-list/blog-list.component';
 
 
   const routes: Routes = [
@@ -24,11 +25,12 @@ import { LayoutComponent } from './layout/layout.component';
         { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'exchange', component: ExchangeComponent },
-        { path: 'prices', component: PricesComponent },
+        { path: 'prices', component: DashboardComponent },
         { path: 'wallets', component: WalletsComponent },
         { path: 'buy-crypto', component: BuyCryptoComponent },
-        { path: 'activities', component: ActivitiesComponent },
-        { path: 'blog', component: BlogComponent }
+        { path: 'activities', component: WalletsComponent },
+        { path: 'blog', component: BlogListComponent },
+        { path: 'blog/:slug', component: BlogComponent },
       ]
     },
     {

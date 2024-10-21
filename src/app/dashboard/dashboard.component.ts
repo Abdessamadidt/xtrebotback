@@ -10,6 +10,7 @@ import {
   ApexStroke,
   ApexGrid
 } from "ng-apexcharts";
+import { Coin } from "../coin";
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -32,52 +33,44 @@ export type ChartOptions = {
 export class DashboardComponent {
   @ViewChild("chart")
   chart: ChartComponent = new ChartComponent;
-  public chartOptions: Partial<ChartOptions>;
+  public coins: Coin[];
 
+ 
   constructor() {
-    this.chartOptions = {
-      series: [
-        {
-          name: "Desktops",
-          data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
-        }
-      ],
-      chart: {
-        height: 350,
-        type: "line",
-        zoom: {
-          enabled: false
-        }
+    this.coins = [
+      {
+        img: '../../assets/btc.svg',
+        price: 76201.323,
+        name: 'Bitcoin',
+        litname: 'BTC'
       },
-      dataLabels: {
-        enabled: false
+      {
+        img: '../../assets/eth.svg',
+        price: 2701.382,
+        name: 'Ethereum',
+        litname: 'ETH'
       },
-      stroke: {
-        curve: "straight"
+      {
+        img: '../../assets/BNB.svg',
+        price: 652.123,
+        name: 'Binance Coin',
+        litname: 'BNB'
       },
-      title: {
-        text: "Product Trends by Month",
-        align: "left"
+      {
+        img: '../../assets/trx.svg',
+        price: 0.1563,
+        name: 'Tron',
+        litname: 'TRC'
       },
-      grid: {
-        row: {
-          colors: ["#f3f3f3", "transparent"], // takes an array which will be repeated on columns
-          opacity: 0.5
-        }
+      {
+        img: '../../assets/SHIBA.png',
+        price: 0.0000189,
+        name: 'Shiba inu',
+        litname: 'SHIB'
       },
-      xaxis: {
-        categories: [
-          "Jan",
-          "Feb",
-          "Mar",
-          "Apr",
-          "May",
-          "Jun",
-          "Jul",
-          "Aug",
-          "Sep"
-        ]
-      }
-    };
+      
+    ];
   }
-}
+  }
+
+

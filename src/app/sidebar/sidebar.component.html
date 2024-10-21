@@ -1,12 +1,19 @@
 <div class="sidenav" [ngClass]="isLeftSidebarCollapsed() ? 'sidenav-collapsed' : ''">
     <div class="logo-container">
         @if (!isLeftSidebarCollapsed()) {
-        <div class="logo-img">
-            <img [src]="imgLogo">
+        <div class="logo-img" *ngIf="!isMobile()">
+            <img [src]="imgLogo" width="120">
         </div>
         }
-        <button class="logo" (click)="toggleCollapse()">
-            <img class="icon-left" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconLeft">
+        <button class="logo" (click)="toggleCollapse()" *ngIf="!isMobile()">
+            <img class="icon-left" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconLeft" width="30">
+        </button>
+        <button class="cancel" (click)="closeSidenav()" *ngIf="isMobile()">
+            <img class="icon-cancel" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconCancel"
+                width="24">
+        </button>
+        <button class="down" *ngIf="isMobile()">
+            <img class="icon-down" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconDown" width="25">
         </button>
     </div>
     <div class="sidenav-nav">
@@ -17,7 +24,7 @@
                 (mouseleave)="setHoveredIndex(null)">
                 <img class="sidenav-link-icon"
                     [src]="(hoveredItemIndex === $index || isActive(item.routeLink)) ? item.hoverIcon : item.icon"
-                    >
+                    width="30" height="30">
                 @if (!isLeftSidebarCollapsed()) {
                 <span class="sidenav-link-text">{{ item.label }}</span>
                 }

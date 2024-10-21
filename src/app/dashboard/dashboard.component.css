@@ -14,7 +14,6 @@
 .row1 {
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
     width: 93%;
 
 }
@@ -84,9 +83,9 @@ button:hover {
 .coinscont {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
     width: 95%;
-    margin-left: 20px;
 }
 
 .cardcoin {
@@ -187,7 +186,6 @@ button:hover {
 .row6,
 .row7 {
     width: 95%;
-    margin-left: 2%;
     display: flex;
 }
 
@@ -251,7 +249,6 @@ button:hover {
 }
 
 .nav {
-    margin-left: 2%;
     margin-top: 27px;
     font-family: "DM Sans", sans-serif;
     list-style: none;
@@ -298,7 +295,6 @@ button:hover {
     }
 
     .nav ul{
-        margin-left: -20px !important;
     }
 
     .nav 

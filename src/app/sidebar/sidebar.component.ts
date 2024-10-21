@@ -14,13 +14,15 @@ export class SidebarComponent {
 
   iconLeft: string = 'assets/icons/left.svg';
   iconRight: string = 'assets/icons/right.svg';
+  iconDown: string = 'assets/icons/down.svg';
   imgLogo: string = 'assets/trebot2.png';
+  iconCancel: string = 'assets/icons/cancel.svg';
 
   constructor(private router: Router) {}
 
   items = [
     {
-      routeLink: '/dashboard',
+      routeLink: '',
       icon: 'assets/icons/home.svg',
       hoverIcon: 'assets/icons/home-hover.svg',
       label: 'Home',
@@ -77,5 +79,9 @@ export class SidebarComponent {
 
   isActive(routeLink: string): boolean {
     return this.router.url === `/${routeLink}`;
+  }
+
+  isMobile(): boolean {
+    return window.innerWidth <= 768;
   }
 }

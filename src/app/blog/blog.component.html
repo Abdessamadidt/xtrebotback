@@ -1,3 +1,30 @@
 <h2>XonBIT</h2>
 <h1>Blog & News</h1>
-<app-carousel-blog class="carousel"></app-carousel-blog>
+<div class="container">
+    <div class="card1">
+        <div class="card-header">
+            <img [src]="blog.image" [alt]="blog.title">
+        </div>
+        <div class="card-body">
+            <p>{{blog.date}}</p>
+            <h2>{{blog.title}}</h2>
+            <div class="spacer"></div>
+            <div class="content" [innerHTML]="blog.content">
+            </div>
+        </div>
+        <div class="card-footer">
+        </div>
+    </div>
+    <div class="card2-wrapper">
+        <h3 class="featured-title">Featured Promotions</h3>
+        <div class="card2">
+            <div class="card-content">
+                <img [src]="promoImg" alt="promotion" class="promo-image">
+                <div class="text-content">
+                    <p>Jan 23rd 2023</p>
+                    <h2>VIP Program</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,12 +1,12 @@
 <app-sidebar [isLeftSidebarCollapsed]="isLeftSidebarCollapsed()"
-  (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)">
-</app-sidebar>
-
-<div [ngClass]="isLeftSidebarCollapsed() ? 'main-content-collapsed' : 'main-content'" class="main-content">
+  (changeIsLeftSidebarCollapsed)="changeIsLeftSidebarCollapsed($event)" />
+<div class="overlay" *ngIf="isMobile() && !isLeftSidebarCollapsed()"></div>
+<div [ngClass]="isLeftSidebarCollapsed() ? 'main-content-collapsed' : 'main-content'">
+  <button class="right" (click)="toggleCollapse()" *ngIf="isMobile()">
+    <img class="icon-left" [ngClass]="{'icon-collapsed': isLeftSidebarCollapsed()}" [src]="iconLeft" width="25">
+  </button>
   <app-header></app-header>
-  <div class="scrollable-content">
-    <router-outlet></router-outlet>
-    <hr>
-    <app-footer class="footer"></app-footer>
-  </div>
+  <router-outlet>
+  </router-outlet>
+<app-footer></app-footer>
 </div>
