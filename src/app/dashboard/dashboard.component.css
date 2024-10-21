@@ -83,8 +83,8 @@ button:hover {
 .coinscont {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-between;
+    justify-content: center  ;
+    gap: 40px;
     width: 95%;
 }
 

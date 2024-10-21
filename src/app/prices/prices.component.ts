@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Coin } from '../coin';
+import { CoinService } from '../coin.service';
 
 @Component({
   selector: 'app-prices',
@@ -8,43 +8,12 @@ import { Coin } from '../coin';
 })
 export class PricesComponent {
 
-  public coins: Coin[];
+  public coins: any[] = [];
 
+  constructor(private coinsService: CoinService) {}
 
-  constructor() {
-    this.coins = [
-      {
-        img: '../../assets/btc.svg',
-        price: 76201.323,
-        name: 'Bitcoin',
-        litname: 'BTC'
-      },
-      {
-        img: '../../assets/eth.svg',
-        price: 2701.382,
-        name: 'Ethereum',
-        litname: 'ETH'
-      },
-      {
-        img: '../../assets/BNB.svg',
-        price: 652.123,
-        name: 'Binance Coin',
-        litname: 'BNB'
-      },
-      {
-        img: '../../assets/trx.svg',
-        price: 0.1563,
-        name: 'Tron',
-        litname: 'TRC'
-      },
-      {
-        img: '../../assets/SHIBA.png',
-        price: 0.0000189,
-        name: 'Shiba inu',
-        litname: 'SHIB'
-      },
-      
-    ];
+  ngOnInit() {
+    this.coins = this.coinsService.getCoins();
   }
   updatePrice(prc:number) {
     const initialPrice = prc; // Assuming this is the initial price
