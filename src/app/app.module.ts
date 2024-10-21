@@ -25,6 +25,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BlogService } from './services/blog.service';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -33,7 +34,7 @@ import { BlogService } from './services/blog.service';
   declarations: [AppComponent, SidebarComponent, HeaderComponent, MainComponent,
      DashboardComponent, FooterComponent, CardcoinComponent, ExchangeComponent, 
      PricesComponent, WalletsComponent, BuyCryptoComponent, ActivitiesComponent, 
-     CarouselBlogComponent, SignupComponent, LayoutComponent,BlogComponent,BlogListComponent],
+     CarouselBlogComponent, SignupComponent, LayoutComponent,BlogComponent,BlogListComponent, LoginComponent],
   imports: [BrowserModule, AppRoutingModule, RouterModule, CommonModule,NgApexchartsModule,HttpClientModule
   ],
   providers: [

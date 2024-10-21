@@ -10,6 +10,7 @@ import { BuyCryptoComponent } from './buy-crypto/buy-crypto.component';
 import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
 import { BlogListComponent } from './blog-list/blog-list.component';
+import { LoginComponent } from './login/login.component';
 
 
   const routes: Routes = [
@@ -25,7 +26,7 @@ import { BlogListComponent } from './blog-list/blog-list.component';
         { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
         { path: 'dashboard', component: DashboardComponent },
         { path: 'exchange', component: ExchangeComponent },
-        { path: 'prices', component: DashboardComponent },
+        { path: 'prices', component: PricesComponent },
         { path: 'wallets', component: WalletsComponent },
         { path: 'buy-crypto', component: BuyCryptoComponent },
         { path: 'activities', component: WalletsComponent },
@@ -36,6 +37,10 @@ import { BlogListComponent } from './blog-list/blog-list.component';
     {
       path: 'signup',
       component: SignupComponent  // Signup sans Layout
+    },
+    {
+      path: 'login',
+      component: LoginComponent  // Signup sans Layout
     }
   ];
   

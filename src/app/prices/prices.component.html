@@ -1,1 +1,41 @@
-<p>prices works!</p>
+<div class="row"></div>
+<div class="row"></div>
+<h1>Today's Cryptocurrency Prices</h1>
+<div class="row mt-5">
+    <table class="">
+        <thead class="bg-white">
+            <tr>
+                <th scope="col" class="th">TOKEN</th>
+                <th scope="col" class="th">PRICE</th>
+                <th scope="col" class="th">24H</th>
+                <th scope="col" class="th">MARKET CAP</th>
+                <th scope="col" class="th">VOLUME</th>
+                <th scope="col" class="th"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let coin of coins" class="border-bottom">
+                <td>
+                    <div class="d-flex align-items-center">
+                        <img [src]="coin.img" class="img-fluid rounded me-2" width="40" height="40">
+                        <span>{{coin.name}}</span>
+                    </div>
+                </td>
+                <td style="color: #777E90">${{updatePrice(coin.price) | number:'1.0-4' }}</td>
+                <td>
+                    <div *ngIf="this.getPrc(coin.price) > 0" class="text-success">
+                        <img src="../../assets/up.svg" class="icon">
+                        {{ this.getPrc(coin.price) | number:'1.2-2' }} %
+                    </div>
+                    <div *ngIf="this.getPrc(coin.price) < 0" class="text-danger">
+                        <img src="../../assets/down.svg" class="icon">
+                        {{ this.getPrc(coin.price) | number:'1.2-2' }} %
+                    </div>
+                </td>
+                <td style="color:#777E90">{{coin.price * 42 | currency}}</td>
+                <td style="color:#777E90">{{coin.price * 22 | number}}</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
