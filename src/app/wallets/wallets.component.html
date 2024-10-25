@@ -7,11 +7,11 @@
         </div>
         <div class="col text-end">
             <button class="button" type="button" class="btn btn-primary" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+                data-bs-target="#exampleModal1">
                 <img src="../../assets/upright.svg">
                 Withdraw</button>
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog ">
                     <div class="modal-content">
@@ -46,17 +46,17 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="row mt-4 choose rounded border">
-                                <h4>Choose network</h4>
-                                <div *ngIf="this.selectedCoin == 0" class="networkcont">
-                                    <div class="network border">BTC</div>
-                                    <div class="network border">BEP-20</div>
-                                </div>
-                                <div *ngIf="this.selectedCoin == 1">
-                                    <div>ERC-20</div>
-                                    <div>BEP-20</div>
-                                </div>
+                            <div *ngIf="this.selectedCoin == 0 || this.selectedCoin == 1" class="row mt-4 choose rounded border">
+                            <h4>Choose network</h4>
+                            <div *ngIf="this.selectedCoin == 0" class="networkcont">
+                                <div class="network border">BTC</div>
+                                <div class="network border">BEP-20</div>
                             </div>
+                            <div *ngIf="this.selectedCoin == 1"  class="networkcont">
+                                <div class="network border">ERC-20</div>
+                                <div class="network border">BEP-20</div>
+                            </div>
+                        </div>
                             <form class="form-container mt-2">
                                 <div class="form-group">
                                     <label for="formGroupExampleInput" class="label mt-2">Adress</label>
@@ -90,8 +90,72 @@
                     </div>
                 </div>
             </div>
-            <button class="button" style="background-color: rgba(128, 128, 128, 0.318);color: black;"><img
-                    src="../../assets/downleft.svg"> Depposit</button>
+           
+        </div>
+        <button class="button" style="background-color: rgba(128, 128, 128, 0.318);color: black;" data-bs-toggle="modal"
+            data-bs-target="#exampleModal2">
+            <img  src="../../assets/downleft.svg">
+            Depposit</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog ">
+                <div class="modal-content">
+                    <h5 class="modal-title text-start" id="exampleModalLabel">Withdraw</h5>
+                    <div class="modal-body text-start">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <img [src]="coins[this.selectedCoin].img" alt="BTC"
+                                            style="width: 30px; height: 30px; margin-top: 5px;">
+                                    </div>
+                                    <div class="col">
+                                        <div class="row lit">{{coins[this.selectedCoin].litname}}</div>
+                                        <div class="row tit">{{coins[this.selectedCoin].name}}</div>
+                                    </div>
+                                </div>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <li *ngFor="let coin of coins;  let i = index" (click)="selectCoin(i)">
+                                    <div class="row">
+                                        <div class="col-2">
+                                            <img [src]="coin.img" alt="BTC"
+                                                style="width: 30px; height: 30px; margin-top: 5px;">
+                                        </div>
+                                        <div class="col">
+                                            <div class="row lit">{{coin.litname}}</div>
+                                            <div class="row tit">{{coin.name}}</div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div *ngIf="this.selectedCoin ==0 || this.selectedCoin ==1" class="row mt-4 choose rounded border">
+                            <h4>Choose network</h4>
+                            <div *ngIf="this.selectedCoin == 0" class="networkcont">
+                                <div class="network border">BTC</div>
+                                <div class="network border">BEP-20</div>
+                            </div>
+                            <div *ngIf="this.selectedCoin == 1"  class="networkcont">
+                                <div class="network border">ERC-20</div>
+                                <div class="network border">BEP-20</div>
+                            </div>
+                        </div>
+                        <form class="form-container mt-2">
+                            <div class="form-group">
+                                <label for="formGroupExampleInput" class="label mt-2">Adress</label>
+                                <input type="text" class="form-control" id="formGroupEmail" placeholder="azzazaz" disabled>
+                            </div>
+                            <div class="form-group mt-2">
+                                <label for="formGroupExampleInput2" class="label mt-2">Amout to diposit</label>
+                                <input type="text" class="form-control" id="formGroupPassword" placeholder="">
+                            </div>
+                        </form>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Depposite</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row ">

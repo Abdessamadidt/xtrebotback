@@ -12,15 +12,15 @@
             </div>
             <hr>
             <div class="row">
-                <div class="col-8 price">{{ price2 | number:'1.0-4' }} USD</div>
+                <div class="col-8 price">{{ price2}} USD</div>
                 <div class="col-4 price">
                     <div *ngIf="prcent > 0"  style="color: rgb(4, 179, 4);">
                         <img src="../../assets/up.svg" style="margin-bottom: 5px;width: 10px;">
-                        {{ prcent | number:'1.2-2' }} %
+                        {{ prcent }} %
                     </div>
                     <div *ngIf="prcent < 0"  style="color: red">
                         <img src="../../assets/down.svg" style="margin-bottom: 5px;width: 10px;">
-                        {{ prcent | number:'1.2-2' }} %
+                        {{ prcent }} %
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
         </div>
 
         <button type="button" class="buttoncoin" data-bs-toggle="modal"
-        data-bs-target="#exampleModal">
+        data-bs-target="#exampleModal"      >
             Veiw asset
         </button>
         <!-- Modal -->

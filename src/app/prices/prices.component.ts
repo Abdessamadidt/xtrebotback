@@ -51,6 +51,7 @@ export class PricesComponent {
       
       // Store the formatted percentage change, rounded to 2 decimal places
       let prcent = parseFloat(percentageChange.toFixed(2));
+
       return prcent
     }
 

@@ -23,13 +23,13 @@
                 </td>
                 <td style="color: #777E90">${{updatePrice(coin.price) | number:'1.0-4' }}</td>
                 <td>
-                    <div *ngIf="this.getPrc(coin.price) > 0" class="text-success">
+                    <div *ngIf="this.getPrc(updatePrice(coin.price)) > 0" class="text-success">
                         <img src="../../assets/up.svg" class="icon">
-                        {{ this.getPrc(coin.price) | number:'1.2-2' }} %
+                        {{ this.getPrc(updatePrice(coin.price)) | number:'1.2-2' }} %
                     </div>
-                    <div *ngIf="this.getPrc(coin.price) < 0" class="text-danger">
+                    <div *ngIf="this.getPrc(updatePrice(coin.price)) < 0" class="text-danger">
                         <img src="../../assets/down.svg" class="icon">
-                        {{ this.getPrc(coin.price) | number:'1.2-2' }} %
+                        {{ this.getPrc(updatePrice(coin.price)) | number:'1.2-2' }} %
                     </div>
                 </td>
                 <td style="color:#777E90">{{coin.price * 42 | currency}}</td>
