@@ -14,8 +14,17 @@
             <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
                 <div class="modal-dialog ">
-                    <div class="modal-content">
-                        <h5 class="modal-title text-start" id="exampleModalLabel">Withdraw</h5>
+                    <div class="modal-content border">
+                        <div class="head">
+                            <div class="modal-title-cont">
+                                <div class="modal-title text-start">Withdraw</div>
+                            </div>
+                            <div class="colxct" style="cursor: pointer;">
+                                <div class="colx border" data-bs-dismiss="modal" aria-label="Close">
+                                    <img src="../../assets/x.svg" alt="Close">
+                                </div>
+                            </div>
+                        </div>
                         <div class="modal-body text-start">
                             <div class="dropdown">
                                 <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton"
@@ -46,17 +55,18 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div *ngIf="this.selectedCoin == 0 || this.selectedCoin == 1" class="row mt-4 choose rounded border">
-                            <h4>Choose network</h4>
-                            <div *ngIf="this.selectedCoin == 0" class="networkcont">
-                                <div class="network border">BTC</div>
-                                <div class="network border">BEP-20</div>
+                            <div *ngIf="this.selectedCoin == 0 || this.selectedCoin == 1"
+                                class="row mt-4 choose rounded border">
+                                <h4>Choose network</h4>
+                                <div *ngIf="this.selectedCoin == 0" class="networkcont">
+                                    <div class="network border">BTC</div>
+                                    <div class="network border">BEP-20</div>
+                                </div>
+                                <div *ngIf="this.selectedCoin == 1" class="networkcont">
+                                    <div class="network border">ERC-20</div>
+                                    <div class="network border">BEP-20</div>
+                                </div>
                             </div>
-                            <div *ngIf="this.selectedCoin == 1"  class="networkcont">
-                                <div class="network border">ERC-20</div>
-                                <div class="network border">BEP-20</div>
-                            </div>
-                        </div>
                             <form class="form-container mt-2">
                                 <div class="form-group">
                                     <label for="formGroupExampleInput" class="label mt-2">Adress</label>
@@ -86,21 +96,33 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">Withdraw</button>
+                        <button type="submit" class="btn btn-primary">
+                            <img src="../../assets/upright.svg">
+                            Withdraw
+                        </button>
                     </div>
                 </div>
             </div>
-           
+
         </div>
         <button class="button" style="background-color: rgba(128, 128, 128, 0.318);color: black;" data-bs-toggle="modal"
             data-bs-target="#exampleModal2">
-            <img  src="../../assets/downleft.svg">
-            Depposit</button>
+            <img src="../../assets/downleft.svg">
+            Deposit</button>
         <!-- Modal -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog ">
                 <div class="modal-content">
-                    <h5 class="modal-title text-start" id="exampleModalLabel">Withdraw</h5>
+                    <div class="head">
+                        <div class="modal-title-cont">
+                            <div class="modal-title text-start">Withdraw</div>
+                        </div>
+                        <div class="colxct" style="cursor: pointer;">
+                            <div class="colx border" data-bs-dismiss="modal" aria-label="Close">
+                                <img src="../../assets/x.svg" alt="Close">
+                            </div>
+                        </div>
+                    </div>
                     <div class="modal-body text-start">
                         <div class="dropdown">
                             <button class="btn dropdown-toggle border" type="button" id="dropdownMenuButton"
@@ -131,13 +153,14 @@
                                 </li>
                             </ul>
                         </div>
-                        <div *ngIf="this.selectedCoin ==0 || this.selectedCoin ==1" class="row mt-4 choose rounded border">
+                        <div *ngIf="this.selectedCoin ==0 || this.selectedCoin ==1"
+                            class="row mt-4 choose rounded border">
                             <h4>Choose network</h4>
                             <div *ngIf="this.selectedCoin == 0" class="networkcont">
                                 <div class="network border">BTC</div>
                                 <div class="network border">BEP-20</div>
                             </div>
-                            <div *ngIf="this.selectedCoin == 1"  class="networkcont">
+                            <div *ngIf="this.selectedCoin == 1" class="networkcont">
                                 <div class="network border">ERC-20</div>
                                 <div class="network border">BEP-20</div>
                             </div>
@@ -145,7 +168,8 @@
                         <form class="form-container mt-2">
                             <div class="form-group">
                                 <label for="formGroupExampleInput" class="label mt-2">Adress</label>
-                                <input type="text" class="form-control" id="formGroupEmail" placeholder="azzazaz" disabled>
+                                <input type="text" class="form-control" id="formGroupEmail" placeholder="azzazaz"
+                                    disabled>
                             </div>
                             <div class="form-group mt-2">
                                 <label for="formGroupExampleInput2" class="label mt-2">Amout to diposit</label>
@@ -153,7 +177,9 @@
                             </div>
                         </form>
                     </div>
-                    <button type="submit" class="btn btn-primary">Depposite</button>
+                    <button class="button" style="background-color: rgba(128, 128, 128, 0.318);color: black;">
+                        <img src="../../assets/downleft.svg">
+                        Deposit</button>
                 </div>
             </div>
         </div>

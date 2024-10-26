@@ -1,47 +1,6 @@
-.main-content {
-    margin-left: 18%;
-    transition: margin-left 0.3s;
+app-side-bar{
+    width: 17%;
 }
 
-.main-content-collapsed {
-    margin-left: 9.55%;
-}
-
-@media (max-width: 768px) {
-    app-sidebar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        z-index: 1000;
-    }
-
-    .main-content {
-        margin-left: 0 !important;
-    }
-
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background-color: rgba(25, 27, 33, 0.64);
-        z-index: 998;
-        opacity: 1;
-        pointer-events: none;
-    }
-
-
-    .right {
-        position: fixed;
-        top: 15px;
-        right: 15px;
-        border: none;
-        background-color: transparent;
-        z-index: 9999;
-    }
-
-
+.container-fluid{
 }

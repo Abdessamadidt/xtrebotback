@@ -111,13 +111,17 @@ span {
     border-radius: 25px;
     padding: 30px;
     background-color: #F7F9FD;
-
 }
 
 .modal-title{
     font-family: 'Inter', sans-serif;
     font-size: 1.6rem;
     font-weight: 600;
+}
+
+.modal-title-cont{
+    width: 200px;
+
 }
 
 .dropdown{
@@ -145,6 +149,7 @@ span {
     width: 355px; 
     padding: 20px;
     border: none;
+    cursor: pointer;
 }
 
 
@@ -269,6 +274,43 @@ label {
     font-weight: 500;
     font-size: 0.8rem;
 }
+
+.head{
+    display: flex;
+    justify-content: space-between;
+align-items: center;
+}
+
+
+.colxct{
+    display: flex;
+    justify-content: flex-end;
+    width: 40px;
+
+}
+
+.colx{
+    background-color: #E0E9FD;
+    padding: 2px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colx img {
+    transition: transform 0.5s ease; /* Transition fluide pour la rotation */
+    transform-origin: center center; /* Centre l'origine de la rotation */
+  }
+  
+  .colx img:hover {
+    transform: rotate(220deg); /* Applique une rotation sur elle-même */
+  }
+
+
+
 
 /* Responsive Styles */
 @media screen and (max-width: 700px) {

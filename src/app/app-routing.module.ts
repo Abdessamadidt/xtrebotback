@@ -4,13 +4,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ExchangeComponent } from './exchange/exchange.component';
 import { PricesComponent } from './prices/prices.component';
 import { WalletsComponent } from './wallets/wallets.component';
-import { BlogComponent } from './blog/blog.component';
 import { ActivitiesComponent } from './activities/activities.component';
 import { BuyCryptoComponent } from './buy-crypto/buy-crypto.component';
 import { SignupComponent } from './signup/signup.component';
 import { LayoutComponent } from './layout/layout.component';
-import { BlogListComponent } from './blog-list/blog-list.component';
 import { LoginComponent } from './login/login.component';
+import { BlogComponent } from './blog/blog.component';
 
 
   const routes: Routes = [
@@ -28,10 +27,9 @@ import { LoginComponent } from './login/login.component';
         { path: 'exchange', component: ExchangeComponent },
         { path: 'prices', component: PricesComponent },
         { path: 'wallets', component: WalletsComponent },
-        { path: 'buy-crypto', component: BuyCryptoComponent },
+        { path: 'buycrypto', component: BuyCryptoComponent },
         { path: 'activities', component: WalletsComponent },
-        { path: 'blog', component: BlogListComponent },
-        { path: 'blog/:slug', component: BlogComponent },
+        { path: 'blog', component: BlogComponent },
       ]
     },
     {

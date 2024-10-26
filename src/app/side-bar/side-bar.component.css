@@ -1,0 +1,93 @@
+
+.offcanvas {
+    width: 250px; /* Adjust width as needed */
+    transition: transform 0.3s ease;
+  }
+  
+  .content {
+    transition: margin-left 0.3s ease;
+    flex-grow: 1;
+  }
+  
+  .show-sidebar .content {
+
+  }
+  
+  .offcanvas.show {
+    position: static;
+    transform: translateX(0); /* Make sidebar push the content */
+  }
+  
+.offcanvas-body{
+    background-color: #F7F9FD;
+
+}
+
+.offcanvas-header{
+    background-color: #F7F9FD;
+
+}
+  
+.list-group{
+}
+
+.list-group li {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 21px;
+    color: #777E90;
+    font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    background-color: #F7F9FD;
+    border: 0px;
+    cursor: pointer;
+    padding: 17px;
+    border-radius: 20px;
+}
+
+.list-group li img{
+    margin-right: 7px;
+}
+
+.active{
+    color: #3772FF;
+    
+}
+.active-background {
+    background-color: #E0E9FD !important;
+    color: white; /* optionnel : changer la couleur du texte si nécessaire */
+}
+
+a {
+    text-decoration: none;
+    color: #777E90;
+}
+
+.iconeleftcont{
+    position: absolute;
+    left: 15%;
+    top: 5%;    
+    z-index: 2200;
+
+}
+
+.iconleft{
+    position: absolute;
+    top: 5%;    
+    left: 3%;
+    z-index: 2200;
+
+}
+
+.listgrp2{
+    margin-top: 130px;
+}
+
+
+
+.imgcoll{
+    margin-left: 6px;
+}
+
+.iconerighttcont{
+    border-right: 1px  rgba(128, 128, 128, 0.297) solid ;
+}

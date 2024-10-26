@@ -202,14 +202,25 @@ button:hover {
 }
 
 .colx{
+    background-color: #E0E9FD;
+    padding: 2px;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.colx img {
     transition: transform 0.5s ease; /* Transition fluide pour la rotation */
-  transform-origin: center; 
-}
-
-
-.colx:hover{
-    transform:  rotate(120deg);
-}
+    transform-origin: center center; /* Centre l'origine de la rotation */
+  }
+  
+  .colx img:hover {
+    transform: rotate(220deg); /* Applique une rotation sur elle-même */
+  }
 
 .modalrprice{
     font-size: 38px;

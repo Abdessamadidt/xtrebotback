@@ -1,6 +1,7 @@
 .container-fluid {
     background-color: #F7F9FD;
     margin-bottom: 120px;
+    margin-left: 20px;
 
 }
 
@@ -83,8 +84,8 @@ button:hover {
 .coinscont {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center  ;
-    gap: 40px;
+    justify-content: space-between  ;
+    gap: 20px;
     width: 95%;
 }
 
@@ -274,6 +275,15 @@ button:hover {
 .titlecont{
     display: none;
 }
+
+.main-content {
+    transition: margin-left 0.3s ease;
+    margin-left: 250px; /* Adjust according to your sidebar width */
+  }
+  
+  .main-content-collapsed {
+    margin-left: 0;
+  }
 
 @media (max-width: 768px) {
 
