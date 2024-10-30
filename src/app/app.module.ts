@@ -25,19 +25,29 @@ import { LoginComponent } from './login/login.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { SideBarComponent } from './side-bar/side-bar.component';
 import { BlogComponent } from './blog/blog.component';
-
-
+import { WithdrawalsComponent } from './withdrawals/withdrawals.component';
+import { DepositsComponent } from './deposits/deposits.component';
+import { CoinsComponent } from './coins/coins.component';
+import { ReactiveFormsModule } from '@angular/forms'; // Importez FormsModule
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { FormsModule } from '@angular/forms';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, MainComponent,
     DashboardComponent, FooterComponent, CardcoinComponent, ExchangeComponent,
-    PricesComponent, WalletsComponent, BuyCryptoComponent, ActivitiesComponent, SignupComponent, LayoutComponent, LoginComponent, CarouselComponent, SideBarComponent, BlogComponent],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, CommonModule, NgApexchartsModule, HttpClientModule,    RouterModule // Make sure your routes are defined
+    PricesComponent, WalletsComponent, BuyCryptoComponent, ActivitiesComponent,
+    SignupComponent, LayoutComponent, LoginComponent, CarouselComponent, SideBarComponent,
+     BlogComponent, WithdrawalsComponent, DepositsComponent, CoinsComponent,UsersComponent],
+  imports: [BrowserModule, AppRoutingModule, RouterModule, CommonModule, NgApexchartsModule, HttpClientModule, RouterModule,
+    FormsModule, ReactiveFormsModule,FormsModule
 
   ],
   providers: [
     provideAnimationsAsync(), BlogService,
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ],
   bootstrap: [AppComponent],
 })

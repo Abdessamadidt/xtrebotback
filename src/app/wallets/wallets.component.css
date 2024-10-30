@@ -201,6 +201,7 @@ button.btn.dropdown-toggle {
     border-radius: 20px;
     padding: 6px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .networkcont{
@@ -309,7 +310,10 @@ align-items: center;
     transform: rotate(220deg); /* Applique une rotation sur elle-même */
   }
 
-
+  .selected-network {
+    background-color: rgba(0, 191, 255, 0.359); /* Bleu transparent */
+    color: blue;
+  }
 
 
 /* Responsive Styles */

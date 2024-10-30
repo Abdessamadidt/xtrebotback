@@ -10,7 +10,7 @@
                 <button type="button">Get Started</button>
             </div>
         </div>
-        <div class="col col2 text-end">
+        <div class="col col2">
             <img class="imghome" src="../../assets/imghome.png">
         </div>
     </div>
@@ -34,10 +34,10 @@
     </div> -->
 
     <div class="coinscont mt-5">
-        <app-cardcoin  *ngFor="let coin of coins"
+        <app-cardcoin *ngFor="let coin of coins"
         [img]="coin.img"
         [name]="coin.name"
-        [litname]="coin.litname"
+        [litnom]="coin.litnom"
         [price]="coin.price"  
         ></app-cardcoin>
     </div>

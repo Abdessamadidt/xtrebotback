@@ -289,9 +289,11 @@ button:hover {
 
     .titlecont{
         display: block;
+        
     }
     .desc{
         display: none;
+
     }
 
     .col2{

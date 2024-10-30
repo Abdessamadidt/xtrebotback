@@ -1,0 +1,56 @@
+
+.container-fluid{
+    margin-left: 20px;
+    width: 98%;
+  }
+  
+  
+  .row{
+    width: 100%;
+  
+  }
+    .th{
+      font-size: 10px;
+      font-weight: 500;
+      color: gray;
+    }
+    
+    td{
+      padding: 30px;
+      font-weight: 500;
+      font-size: 13px;
+    }
+  
+    table {
+      border-collapse: collapse;
+      border-spacing: 0;
+      width: 100%;
+    }
+    
+    th, td {
+      text-align: left;
+      padding: 16px;
+      border: 1px rgba(255, 255, 255, 0.696) solid;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #ffffff;
+      border-radius: 20px;
+    }
+  
+.form-control{
+}
+
+.btn-success{
+    cursor: none;
+}
+.thbut{
+    width: 200px;
+}
+
+thead{
+}
+
+p{
+  margin-top: 7px;
+}

@@ -3,22 +3,22 @@
         <div class="card-header">
             <div class="row headercoin">
                 <div class="col-4 imgcoin">
-                    <img [src]="img">
+                    <img [src]="lassets+litnom+ext">
                 </div>
                 <div class="col">
                     <div class="row tcoin">{{name}}</div>
-                    <div class="row acoin">{{litname}}</div>
+                    <div class="row acoin">{{litnom}}</div>
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-8 price">{{ price2}} USD</div>
                 <div class="col-4 price">
-                    <div *ngIf="prcent > 0"  style="color: rgb(4, 179, 4);">
+                    <div *ngIf="prcent > 0" style="color: rgb(4, 179, 4);">
                         <img src="../../assets/up.svg" style="margin-bottom: 5px;width: 10px;">
                         {{ prcent }} %
                     </div>
-                    <div *ngIf="prcent < 0"  style="color: red">
+                    <div *ngIf="prcent < 0" style="color: red">
                         <img src="../../assets/down.svg" style="margin-bottom: 5px;width: 10px;">
                         {{ prcent }} %
                     </div>
@@ -34,12 +34,11 @@
             </div>
         </div>
 
-        <button type="button" class="buttoncoin" data-bs-toggle="modal"
-        data-bs-target="#exampleModal"      >
+        <button type="button" class="buttoncoin" data-bs-toggle="modal" data-bs-target="#exampleModal">
             Veiw asset
         </button>
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -68,13 +67,50 @@
 
                             <!-- <button type="button" class="button" data-bs-dismiss="modal" aria-label="Close">X</button> -->
                         </div>
-                        <div class="row ">
-                            <div class="col modalrprice">0
-                                <p style="background: #FF9F38;" class="spancoin">BTC</p>
+                        <div class="ele1 d-flex">
+                            <div class="col mb-5">
+                                <div class="title">Total Balance</div>
+                                <div class="sold">0 <span>BTC</span></div>
+                                <div class="pricedet">0.00 USD</div>
+                            </div>
+                            div class="row ">
+                            <div class="col-3 col2 border rounded">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../../assets/asset1.svg">
+                                    </div>
+                                    <div class="col col22">
+                                        <div class="row title2">Asset Balance</div>
+                                        <div class="row price2">0 BTC</div>
+                                        <div class="row pricedet2">0.00 USD</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 col2 border rounded">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="../../assets/asset2.svg">
+                                    </div>
+                                    <div class="col col22">
+                                        <div class="row title2">Exchange Balance</div>
+                                        <div class="row price2">0 BTC</div>
+                                        <div class="row pricedet2">0.00 USD</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col mt-2">
+                                <div class="row title2">Asset Balance</div>
+                                <div class="row">
+                                    <div class="litbx1"></div>
+                                </div>
+                                <div class="row">
+                                    Exchange Balance
+                                </div>
+                                <div class="row">
+                                    <div class="litbx2"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="row modalr3">$0.00</div>
-                        <img src="../../assets/details bitcoins.png" class="imgstats mt-3">
 
                         <div class="row">
                             <div class="col">

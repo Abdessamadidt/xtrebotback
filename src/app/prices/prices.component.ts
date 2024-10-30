@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CoinService } from '../coin.service';
+import { CoinsService } from '../services/coins-service.service';
 
 @Component({
   selector: 'app-prices',
@@ -8,12 +8,24 @@ import { CoinService } from '../coin.service';
 })
 export class PricesComponent {
 
+  lassets = "../../assets/coins/"
+  ext = ".svg"
+
   public coins: any[] = [];
 
-  constructor(private coinsService: CoinService) {}
+  constructor(private coinsService: CoinsService) {}
 
   ngOnInit() {
-    this.coins = this.coinsService.getCoins();
+    this.loadCoins()
+  }
+
+  loadCoins(): void {
+    this.coinsService.getCoins().subscribe(
+      data => {
+        this.coins = data.sort((a: any, b: any) => a.name.localeCompare(b.name));
+      },
+      error => console.error('Erreur lors de la récupération des coins', error)
+    );
   }
   updatePrice(prc:number) {
     const initialPrice = prc; // Assuming this is the initial price

@@ -1,3 +1,10 @@
+.sidebarcont{
+    position: fixed;
+    z-index: 1000;
+    height: 100vh;
+    background-color: #F7F9FD;
+    overflow: hidden;
+}
 
 .offcanvas {
     width: 250px; /* Adjust width as needed */
@@ -20,6 +27,7 @@
   
 .offcanvas-body{
     background-color: #F7F9FD;
+    overflow: hidden;
 
 }
 
@@ -89,5 +97,17 @@ a {
 }
 
 .iconerighttcont{
-    border-right: 1px  rgba(128, 128, 128, 0.297) solid ;
+    border-right: 1px  rgba(99, 93, 93, 0.14) solid ;
+} 
+
+.iconeleftcont img{
+    left: 15%;
+    position: fixed;
+
 }
+
+.iconleft{
+    margin-left: 30%;
+    margin-top: 1%;
+}
+

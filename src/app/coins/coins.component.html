@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <h1>Coins</h1>
+    <div class="row mt-5 bg-white border">
+      <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th >Name</th>
+            <th>Lit Name</th>
+            <th>Price</th>
+            <th class="thbut"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let coin of coins">
+            <td>
+              <img [src]="lassets+coin.litnom+ext" width="30">
+            </td>
+            <td>
+                <p>
+                    {{ coin.name }}
+                </p>
+            </td>
+            <td>
+                <p>
+                    {{ coin.litnom }}
+                </p>
+            </td>
+            <td>
+              <input type="number" class="form-control" [(ngModel)]="coin.price" (input)="coin.isPriceSubmitted = false">
+            </td>
+            <td class="d-flex justify-content-between">
+              <button *ngIf="!coin.isPriceSubmitted" class="btn btn-primary" (click)="submitCoinUpdate(coin)">
+                <i class="bi bi-arrow-repeat" style="cursor: pointer;"></i> Submit price
+              </button>
+              <div *ngIf="coin.isPriceSubmitted" class="btn btn-success">
+                <i class="bi bi-check-circle-fill" style="cursor: pointer;"></i> Submitted
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  

@@ -11,11 +11,14 @@ export class CardcoinComponent {
   @Input() img!: string;
   @Input() price!: number;
   @Input() name!: string;
-  @Input() litname!: string;
+  @Input() litnom!: string;
 
   prcent!: number 
   price2: number = this.price;
   intervalId: any;
+
+  lassets = "../../assets/coins/"
+  ext = ".svg"
 
   constructor(private cdr: ChangeDetectorRef) { }
 

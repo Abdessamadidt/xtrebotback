@@ -1,8 +1,12 @@
 .page-main-header{
-    background-color: #F7F9FD;
-    width: 99%;
+    background-color: #f7f9fdfa;
+    width: 92%;
     overflow: hidden;
     margin-left: 20px;
+    position: fixed;
+    z-index: 100;
+    top: 0%;
+    left: 4%;
 }
 
 .main-header-right{
@@ -105,6 +109,11 @@ li{
     display: none;
 }
 
+.nav{
+    margin-left: 5%;
+    width: 800px;
+}
+
 @media (max-width: 1300px) {
     .nav-right ul li {
         margin-right: 20px; /* Applique le margin-right de 20px */
@@ -124,18 +133,18 @@ li{
     .signup{
         margin-right: 40px;
         position: fixed;
-        top: 10px;
-        right: 20px
+        top: 20px;
+        right: -10px
     }
 
     .logo{
         display: block;
         position: fixed;
-        top: 20px;
-        left: 10px
+        top: 30px;
+        left: 20px
     }
     .page-main-header{
-        background-color: #c6ccd88d;
+        background-color: #f7f9fdf0;
         position: fixed;
         height: 80px;
         top: 0;

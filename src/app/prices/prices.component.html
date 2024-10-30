@@ -1,41 +1,30 @@
-<div class="row"></div>
-<div class="row"></div>
-<h1>Today's Cryptocurrency Prices</h1>
-<div class="row mt-5">
-    <table class="">
-        <thead class="bg-white">
-            <tr>
-                <th scope="col" class="th">TOKEN</th>
-                <th scope="col" class="th">PRICE</th>
-                <th scope="col" class="th">24H</th>
-                <th scope="col" class="th">MARKET CAP</th>
-                <th scope="col" class="th">VOLUME</th>
-                <th scope="col" class="th"></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let coin of coins" class="border-bottom">
-                <td>
-                    <div class="d-flex align-items-center">
-                        <img [src]="coin.img" class="img-fluid rounded me-2" width="40" height="40">
-                        <span>{{coin.name}}</span>
-                    </div>
-                </td>
-                <td style="color: #777E90">${{updatePrice(coin.price)}}</td>
-                <td>
-                    <div *ngIf="this.getPrc(updatePrice(coin.price)) > 0" class="text-success">
-                        <img src="../../assets/up.svg" class="icon">
-                        {{ this.getPrc(updatePrice(coin.price))}} %
-                    </div>
-                    <div *ngIf="this.getPrc(updatePrice(coin.price)) < 0" class="text-danger">
-                        <img src="../../assets/down.svg" class="icon">
-                        {{ this.getPrc(updatePrice(coin.price))}} %
-                    </div>
-                </td>
-                <td style="color:#777E90">{{coin.price * 42}}</td>
-                <td style="color:#777E90">{{coin.price * 22}}</td>
-                <td><img src="../../assets/chartbitcoin-removebg-preview.png" width="120"></td>
-            </tr>
-        </tbody>
-    </table>
+<div class="container-fluid">
+    <h1>Today's Cryptocurrency Prices</h1>
+    <div class="row mt-5">
+        <table class="">
+            <thead class="bg-white">
+                <tr>
+                    <th scope="col" class="th">TOKEN</th>
+                    <th scope="col" class="th">PRICE</th>
+                    <th scope="col" class="th">MARKET CAP</th>
+                    <th scope="col" class="th">VOLUME</th>
+                    <th scope="col" class="th"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let coin of coins" class="border-bottom">
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <img [src]="lassets+coin.litnom+ext" class="img-fluid rounded me-2" width="40" height="40">
+                            <span>{{coin.name}}</span>
+                        </div>
+                    </td>
+                    <td style="color: #777E90">${{updatePrice(coin.price)}}</td>
+                    <td style="color:#777E90">{{coin.price * 42}}</td>
+                    <td style="color:#777E90">{{coin.price * 22}}</td>
+                    <td><img src="../../assets/chartbitcoin-removebg-preview.png" width="120"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

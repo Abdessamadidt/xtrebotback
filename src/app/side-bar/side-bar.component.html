@@ -6,50 +6,74 @@
         </div>
         <div class="offcanvas-body">
             <ul class="list-group mt-5">
-                <li class="list-group-item" [ngClass]="{'active-background': rlaDashboard.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaDashboard.isActive}">
                     <a [routerLink]="['/dashboard']" routerLinkActive="active" #rlaDashboard="routerLinkActive">
                         <img [src]="rlaDashboard.isActive ? '../../assets/homebleu.svg' : '../../assets/home.svg'" />
                         Home
                     </a>
                 </li>
-                <li class="list-group-item" [ngClass]="{'active-background': rlaExchange.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaExchange.isActive}">
                     <a [routerLink]="['/exchange']" routerLinkActive="active" #rlaExchange="routerLinkActive">
                         <img
                             [src]="rlaExchange.isActive ? '../../assets/exchangebleu.svg' : '../../assets/exchange.svg'" />
                         Exchange
                     </a>
                 </li>
-                <li class="list-group-item" [ngClass]="{'active-background': rlaPrices.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaPrices.isActive}">
                     <a [routerLink]="['/prices']" routerLinkActive="active" #rlaPrices="routerLinkActive">
                         <img [src]="rlaPrices.isActive ? '../../assets/pricesbleu.svg' : '../../assets/prices.svg'" />
                         Prices
                     </a>
                 </li>
-                <li class="list-group-item" [ngClass]="{'active-background': rlaWallets.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaWallets.isActive}">
                     <a [routerLink]="['/wallets']" routerLinkActive="active" #rlaWallets="routerLinkActive">
                         <img
                             [src]="rlaWallets.isActive ? '../../assets/walletsbleu.svg' : '../../assets/wallets.svg'" />
                         Wallets
                     </a>
                 </li>
-                <li class="list-group-item" [ngClass]="{'active-background': rlaBuyCrypto.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaBuyCrypto.isActive}">
                     <a [routerLink]="['/buycrypto']" routerLinkActive="active" #rlaBuyCrypto="routerLinkActive">
                         <img
                             [src]="rlaBuyCrypto.isActive ? '../../assets/buycryptobleu.svg' : '../../assets/buycrypto.svg'" />
                         Buy Crypto
                     </a>
                 </li>
-                <li class="list-group-item" [ngClass]="{'active-background': rlaActivities.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaActivities.isActive}">
                     <a [routerLink]="['/activities']" routerLinkActive="active" #rlaActivities="routerLinkActive">
                         <img
                             [src]="rlaActivities.isActive ? '../../assets/activitiesbleu.svg' : '../../assets/activities.svg'" />
                         Activities
                     </a>
                 </li>
-                <li class="list-group-item" [ngClass]="{'active-background': rlaLogout.isActive}">
+                <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaLogout.isActive}">
                     <a [routerLink]="['/logout']" routerLinkActive="active" #rlaLogout="routerLinkActive">
                         <img [src]="rlaLogout.isActive ? '../../assets/logoutbleu.svg' : '../../assets/logout.svg'" />
                         Logout
+                    </a>
+                </li>
+                <li *ngIf="isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaDeposits.isActive}">
+                    <a [routerLink]="['/deposits']" routerLinkActive="active" #rlaDeposits="routerLinkActive">
+                        <img [src]="rlaDeposits.isActive ? '../../assets/logoutbleu.svg' : '../../assets/logout.svg'" />
+                        Deposits
+                    </a>
+                </li>
+                <li *ngIf="isAdmin"  class="list-group-item" [ngClass]="{'active-background': rlaWithdrawals.isActive}">
+                    <a [routerLink]="['/withdrawals']" routerLinkActive="active" #rlaWithdrawals="routerLinkActive">
+                        <img [src]="rlaWithdrawals.isActive ? '../../assets/logoutbleu.svg' : '../../assets/logout.svg'" />
+                        Withdrawals
+                    </a>
+                </li>
+                <li *ngIf="isAdmin"  class="list-group-item" [ngClass]="{'active-background': rlaCoins.isActive}">
+                    <a [routerLink]="['/coins']" routerLinkActive="active" #rlaCoins="routerLinkActive">
+                        <img [src]="rlaCoins.isActive ? '../../assets/logoutbleu.svg' : '../../assets/logout.svg'" />
+                        Coins
+                    </a>
+                </li>
+                <li *ngIf="isAdmin"  class="list-group-item" [ngClass]="{'active-background': rlaUsers.isActive}">
+                    <a [routerLink]="['/coins']" routerLinkActive="active" #rlaUsers="routerLinkActive">
+                        <img [src]="rlaUsers.isActive ? '../../assets/logoutbleu.svg' : '../../assets/logout.svg'" />
+                        Users
                     </a>
                 </li>
             </ul>
@@ -63,44 +87,64 @@
     <div *ngIf="!isSidebarVisible" class="iconerighttcont p-2">
         <img class="iconleft" src="../../assets/rightside.svg" (click)="toggleSidebar()">
         <ul class="list-group listgrp2">
-            <li class="list-group-item" [ngClass]="{'active-background': rlaDashboard.isActive}">
+            <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaDashboard.isActive}">
                 <a [routerLink]="['/dashboard']" routerLinkActive="active" #rlaDashboard="routerLinkActive">
                     <img class="imgcoll"
                         [src]="rlaDashboard.isActive ? '../../assets/homebleu.svg' : '../../assets/home.svg'" /></a>
             </li>
-            <li class="list-group-item" [ngClass]="{'active-background': rlaExchange.isActive}">
+            <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaExchange.isActive}">
                 <a [routerLink]="['/exchange']" routerLinkActive="active" #rlaExchange="routerLinkActive">
                     <img class="imgcoll"
                         [src]="rlaExchange.isActive ? '../../assets/exchangebleu.svg' : '../../assets/exchange.svg'" /></a>
             </li>
-            <li class="list-group-item" [ngClass]="{'active-background': rlaPrices.isActive}">
+            <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaPrices.isActive}">
                 <a [routerLink]="['/prices']" routerLinkActive="active" #rlaPrices="routerLinkActive">
                     <img class="imgcoll"
                         [src]="rlaPrices.isActive ? '../../assets/pricesbleu.svg' : '../../assets/prices.svg'" />
                 </a>
             </li>
-            <li class="list-group-item" [ngClass]="{'active-background': rlaWallets.isActive}">
+            <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaWallets.isActive}">
                 <a [routerLink]="['/wallets']" routerLinkActive="active" #rlaWallets="routerLinkActive">
                     <img class="imgcoll"
                         [src]="rlaWallets.isActive ? '../../assets/walletsbleu.svg' : '../../assets/wallets.svg'" />
                 </a>
             </li>
-            <li class="list-group-item" [ngClass]="{'active-background': rlaBuyCrypto.isActive}">
+            <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaBuyCrypto.isActive}">
                 <a [routerLink]="['/buycrypto']" routerLinkActive="active" #rlaBuyCrypto="routerLinkActive">
                     <img  class="imgcoll" 
                         [src]="rlaBuyCrypto.isActive ? '../../assets/buycryptobleu.svg' : '../../assets/buycrypto.svg'" />
                 </a>
             </li>
-            <li class="list-group-item" [ngClass]="{'active-background': rlaActivities.isActive}">
+            <li *ngIf="!isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaActivities.isActive}">
                 <a [routerLink]="['/activities']" routerLinkActive="active" #rlaActivities="routerLinkActive">
                     <img  class="imgcoll" 
                         [src]="rlaActivities.isActive ? '../../assets/activitiesbleu.svg' : '../../assets/activities.svg'" />
                 </a>
             </li>
-            <li class="list-group-item" [ngClass]="{'active-background': rlaLogout.isActive}">
-                <a [routerLink]="['/logout']" routerLinkActive="active" #rlaLogout="routerLinkActive">
-                    <img  class="imgcoll"  [src]="rlaLogout.isActive ? '../../assets/logoutbleu.svg' : '../../assets/logout.svg'" />
+            <li *ngIf="isAdmin"  class="list-group-item" [ngClass]="{'active-background': rlaWithdrawals.isActive}">
+                <a [routerLink]="['/withdrawals']" routerLinkActive="active" #rlaWithdrawals="routerLinkActive">
+                    <img  class="imgcoll" 
+                        [src]="rlaWithdrawals.isActive ? '../../assets/activitiesbleu.svg' : '../../assets/activities.svg'" />
                 </a>
             </li>
+            <li *ngIf="isAdmin"  class="list-group-item" [ngClass]="{'active-background': rlaDeposits.isActive}">
+                <a [routerLink]="['/deposits']" routerLinkActive="active" #rlaDeposits="routerLinkActive">
+                    <img  class="imgcoll" 
+                        [src]="rlaDeposits.isActive ? '../../assets/activitiesbleu.svg' : '../../assets/activities.svg'" />
+                </a>
+            </li>
+            <li  *ngIf="isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaCoins.isActive}">
+                <a [routerLink]="['/coins']" routerLinkActive="active" #rlaCoins="routerLinkActive">
+                    <img  class="imgcoll" 
+                        [src]="rlaCoins.isActive ? '../../assets/activitiesbleu.svg' : '../../assets/activities.svg'" />
+                </a>
+            </li>
+            <li  *ngIf="isAdmin" class="list-group-item" [ngClass]="{'active-background': rlaUsers.isActive}">
+                <a [routerLink]="['/users']" routerLinkActive="active" #rlaUsers="routerLinkActive">
+                    <img  class="imgcoll" 
+                        [src]="rlaUsers.isActive ? '../../assets/activitiesbleu.svg' : '../../assets/activities.svg'" />
+                </a>
+            </li>
+
         </ul>
     </div>

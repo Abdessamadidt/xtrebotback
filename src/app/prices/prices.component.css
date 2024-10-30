@@ -1,6 +1,11 @@
 
+.container-fluid{
+  margin-left: 20px;
+}
+
+
 .row{
-  width: 98%;
+  width: 100%;
 
 }
   .th{
